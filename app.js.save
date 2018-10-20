@@ -1,0 +1,48 @@
+var express = require('express');
+var app = express();
+const request = require('request');
+
+app.get('/json', function (req, res) {
+   
+   const options = {  
+       url: 'http://www.mapquestapi.com/geocoding/v1/address?key=glyIhjhlYOHtsrdwJFTm7I2Kwc6hKFDR&location='+req.query.city+','+req.query.state,
+       method: 'GET',
+       headers: {
+           'Accept': 'application/json',
+           'Accept-Charset': 'utf-8',
+           'User-Agent': 'my-reddit-client'
+       }
+   };
+  const options = {  
+       url: 'http://www.mapquestapi.com/geocoding/v1/address?key=glyIhjhlYOHtsr$
+       method: 'GET',
+       headers: {
+           'Accept': 'application/json',
+           'Accept-Charset': 'utf-8',
+           'User-Agent': 'my-reddit-client'
+       }
+   };
+
+https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today
+   request(options, function(err, res, body) {  
+       let json = JSON.parse(body);
+       console.log(json);
+   });
+   // Prepare output in JSON format
+   response = {
+      city:req.query.city,
+      state:req.query.state,
+      sunrise_time:json.results.locations.latLng.lat,
+      sunset_time:json.results.locations.latLng.lng
+   };
+   console.log(request);
+   res.end(JSON.stringify(response));
+})
+
+var server = app.listen(8002, function () {
+
+   var host = server.address().address
+   var port = server.address().port
+
+   console.log("Example app listening at http://%s:%s", host, port)
+})

@@ -1,0 +1,26 @@
+{
+  "name": "daniel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingodaniel/Sunrise-Sunset.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dingodaniel/Sunrise-Sunset/issues"
+  },
+  "homepage": "https://github.com/dingodaniel/Sunrise-Sunset#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
